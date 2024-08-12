@@ -10,6 +10,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -40,6 +42,7 @@ public class Owner extends BaseEntity{
     @Column(nullable = false)
     private boolean approved;
     
+    @JsonIgnore
     @OneToMany(mappedBy = "owner",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Hostel> hostels;
     

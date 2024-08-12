@@ -1,6 +1,6 @@
 package com.stallocator.controller;
 
-import static com.stallocator.utils.auth.authenticate;
+import static com.stallocator.utils.auth.authenticate_CustModule;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.stallocator.dto.ApiResponse;
 import com.stallocator.dto.CustomerDTO;
+import com.stallocator.dto.CustomerRequestDTO;
 import com.stallocator.service.CustomerServiceImpl;
 
 @RestController
@@ -34,7 +35,7 @@ public class CustomerController {
 	
 	@GetMapping("/{em}")
 	public ResponseEntity<?> getCustomer(@PathVariable String em, HttpServletRequest request){
-		authenticate(request, em);
+		authenticate_CustModule(request, em);
 		return ResponseEntity.ok(customerServiceImpl.getCustomer(em));	
 		
 	}
@@ -45,20 +46,20 @@ public class CustomerController {
 			return ResponseEntity.status(HttpStatus.CREATED).body(customerServiceImpl.addCustomer(customerDTO));
 		}
 		catch(RuntimeException e){
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse("Account with this email already exists. Try logging in"));
 		}
 	}
 	
 	@PutMapping("/{em}")
-	public ResponseEntity<?> updateCustomer(@PathVariable String em,@RequestBody CustomerDTO customerDTO, HttpServletRequest request){
-		authenticate(request, em);
-			return ResponseEntity.status(HttpStatus.OK).body(customerServiceImpl.updateCustomer(em,customerDTO));
+	public ResponseEntity<?> updateCustomer(@PathVariable String em,@RequestBody CustomerRequestDTO customerRequestDTO, HttpServletRequest request){
+		authenticate_CustModule(request, em);
+			return ResponseEntity.status(HttpStatus.OK).body(customerServiceImpl.updateCustomer(em,customerRequestDTO));
 	
 	}
 
 	@DeleteMapping("/{em}")
 	public ResponseEntity<?> deleteCustomer(@PathVariable String em, HttpServletRequest request){
-		authenticate(request, em);
+		authenticate_CustModule(request, em);
 			return ResponseEntity.status(HttpStatus.OK).body(customerServiceImpl.deleteCustomer(em));
 	
 	}

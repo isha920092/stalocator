@@ -12,15 +12,16 @@ import lombok.Setter;
 @Setter
 //@AllArgsConstructor
 @NoArgsConstructor
-public class CustomerDTO extends BaseDTO{
+public class CustomerRequestDTO extends BaseDTO{
     private String firstName;
     private String lastName;
+    @JsonProperty(access = Access.READ_ONLY)
     private String email;
     private String password;
     @JsonProperty(access = Access.READ_ONLY)
     private Role role;
     
-    public CustomerDTO(String firstName, String lastName, String email, String password) {
+    public CustomerRequestDTO(String firstName, String lastName, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

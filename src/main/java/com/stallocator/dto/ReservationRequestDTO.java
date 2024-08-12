@@ -1,6 +1,8 @@
 package com.stallocator.dto;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+
+import com.stallocator.entities.TypeDorm;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,8 +15,10 @@ import lombok.Setter;
 @NoArgsConstructor
 public class ReservationRequestDTO {
 
-    private LocalDateTime bookingStartDate;
-    private LocalDateTime bookingEndDate;
-    private Long customerId;
+    private LocalDate bookingStartDate;
+    private LocalDate bookingEndDate;
+    private Integer beds;
+    private TypeDorm typeDorm;
+    //private Long customerId;
     private Long hostelId;
 }

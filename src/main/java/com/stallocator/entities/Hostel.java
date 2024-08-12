@@ -10,6 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -37,6 +39,9 @@ public class Hostel extends BaseEntity{
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
+    @OneToMany(mappedBy = "hostel", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Reservation> reservations;
+    
     @OneToMany(mappedBy = "hostel", cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Room> rooms;
 }

@@ -1,6 +1,6 @@
 package com.stallocator.controller;
 
-import static com.stallocator.utils.auth.authenticate_byId;
+import static com.stallocator.utils.auth.authenticate_ResModule;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.stallocator.dto.ApiResponse;
-import com.stallocator.dto.ReservationDTO;
 import com.stallocator.dto.ReservationRequestDTO;
 import com.stallocator.service.ReservationServiceImpl;
 
@@ -27,44 +26,44 @@ public class CustomerReservationController {
 	@Autowired
 	ReservationServiceImpl ReservationServiceImpl;
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<?> getAllReservations(@PathVariable Long id, HttpServletRequest request){
-		authenticate_byId(request, id);
-		return ResponseEntity.ok(ReservationServiceImpl.getAllReservationsByCustomer(id));
+	@GetMapping("/{custid}")
+	public ResponseEntity<?> getAllReservations(@PathVariable Long custid, HttpServletRequest request){
+		authenticate_ResModule(request, custid);
+		return ResponseEntity.ok(ReservationServiceImpl.getAllReservationsByCustomer(custid));
 		
 	}
 	
 //	@GetMapping("/{em}")
 //	public ResponseEntity<?> getReservation(@PathVariable String em){
-//		authenticate_byId(request, id);
+//		authenticate_ResModule(request, id);
 //		return ResponseEntity.ok(ReservationServiceImpl.getReservation(em));	
 //		
 //	}
 	
 	//WORK PENDING
 	
-	@PostMapping("/{id}")
-	public ResponseEntity<?> addReservation(@PathVariable Long id, @RequestBody ReservationRequestDTO reservationRequestDTO, HttpServletRequest request){
-		authenticate_byId(request, id);
+	@PostMapping("/{custid}")
+	public ResponseEntity<?> addReservation(@PathVariable Long custid, @RequestBody ReservationRequestDTO reservationRequestDTO, HttpServletRequest request){
+		authenticate_ResModule(request, custid);
 		try {
-			return ResponseEntity.status(HttpStatus.CREATED).body(ReservationServiceImpl.addReservation(reservationRequestDTO));
+			return ResponseEntity.status(HttpStatus.CREATED).body(ReservationServiceImpl.addReservation(custid,reservationRequestDTO));
 		}
 		catch(RuntimeException e){
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ApiResponse(e.getMessage()));
 		}
 	}
 	
-	@PutMapping("/{id}")
-	public ResponseEntity<?> updateReservation(@PathVariable Long id, @RequestBody ReservationRequestDTO reservationRequestDTO, HttpServletRequest request){
-		authenticate_byId(request, id);	
-		return ResponseEntity.status(HttpStatus.OK).body(ReservationServiceImpl.updateReservation(id,reservationRequestDTO));
+	@PutMapping("/{custid}/{resid}")
+	public ResponseEntity<?> updateReservation(@PathVariable Long custid,@PathVariable Long resid, @RequestBody ReservationRequestDTO reservationRequestDTO, HttpServletRequest request){
+		authenticate_ResModule(request, custid);	
+		return ResponseEntity.status(HttpStatus.OK).body(ReservationServiceImpl.updateReservation(custid,resid,reservationRequestDTO));
 	
 	}
 
-	@DeleteMapping("/{id}")
-	public ResponseEntity<?> deleteReservation(@PathVariable Long id, HttpServletRequest request){
-		authenticate_byId(request, id);		
-		return ResponseEntity.status(HttpStatus.OK).body(ReservationServiceImpl.deleteReservation(id));
+	@DeleteMapping("/{custid}/{resid}")
+	public ResponseEntity<?> deleteReservation(@PathVariable Long custid,@PathVariable Long resid, HttpServletRequest request){
+		authenticate_ResModule(request, custid);		
+		return ResponseEntity.status(HttpStatus.OK).body(ReservationServiceImpl.deleteReservation(custid,resid));
 	
 	}
 }

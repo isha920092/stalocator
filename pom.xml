@@ -15,7 +15,7 @@
 	<name>spring_boot_backend_template</name>
 	<description>Template Project for Spring Boot based Backend </description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
