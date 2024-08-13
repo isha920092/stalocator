@@ -19,7 +19,7 @@ import com.stallocator.entities.Role;
 import com.stallocator.service.CustomerServiceImpl;
 import com.stallocator.service.LoginServiceImpl;
 
-
+@RestController
 @CrossOrigin(origins = "http://10.0.2.15:3000")
 @RequestMapping("/login")
 public class LoginController {
