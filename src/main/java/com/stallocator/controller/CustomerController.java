@@ -24,7 +24,8 @@ import com.stallocator.dto.CustomerRequestDTO;
 import com.stallocator.service.CustomerServiceImpl;
 
 @RestController
-@CrossOrigin(origins = "http://10.0.2.15:3000")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://10.0.2.15:3000")
 @RequestMapping("/customers")
 public class CustomerController {
 	@Autowired

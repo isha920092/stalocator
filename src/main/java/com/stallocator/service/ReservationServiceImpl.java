@@ -91,7 +91,7 @@ public class ReservationServiceImpl implements ReservationService{
 
 	@Override
 	public List<ReservationDTO> getAllReservationsByCustomer(Long custid) {
-		return reservationRepository.findByCustomerId(custid).stream().map(res->(modelMapper.map(res, ReservationDTO.class))).collect(Collectors.toList());
+		return reservationRepository.findByCustomerId(custid).stream().sorted((res1,res2)->res1.getBookingStartDate().compareTo(res2.getBookingStartDate())).map(res->(modelMapper.map(res, ReservationDTO.class))).collect(Collectors.toList());
 
 	}
 

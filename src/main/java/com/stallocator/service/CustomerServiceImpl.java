@@ -40,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService{
 //            throw new SecurityException("You are not authorized to update this customer.");
 //        }
 	    Customer cust = customerRepository.findByEmail(em)
-	            .orElseThrow(() -> new ResourceNotFoundException("Customer not found"));
+	            .orElseThrow(() -> new ResourceNotFoundException("Invalid credentials"));
 	    return modelMapper.map(cust, CustomerDTO.class);
 	}
 

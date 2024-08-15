@@ -24,7 +24,8 @@ import com.stallocator.service.ReservationServiceImpl;
 
 
 @RestController
-@CrossOrigin(origins = "http://10.0.2.15:3000")
+@CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://10.0.2.15:3000")
 @RequestMapping("/customers/reservations")
 public class CustomerReservationController {
 	@Autowired

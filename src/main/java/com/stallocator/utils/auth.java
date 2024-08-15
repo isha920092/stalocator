@@ -42,4 +42,19 @@ public class auth {
         }
 	}
 	
+	public static void 	authenticate_AdminModule(HttpServletRequest request) {
+        HttpSession session = request.getSession(false); // Get the current session, but don't create a new one if it doesn't exist
+        if (session != null && session.getAttribute("user") != null) {
+            if(session.getAttribute("role") == Role.ADMIN )
+            	return;
+            else 
+                // No valid session
+    			throw new ResourceNotFoundException("invalid user");
+        } else {
+            // No valid session
+			throw new ResourceNotFoundException("invalid user");
+
+        }
+	}
+	
 }
