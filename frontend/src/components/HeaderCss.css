@@ -1,0 +1,37 @@
+.nav-right {
+    margin-right: 40px;
+    font-size: xx-large;
+    font-weight: bold;
+   
+  }
+  
+  .nav-right ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav-right li {
+    margin-left: 20px;
+    padding-left: 40px;
+  }
+  
+  .nav-right a {
+    color:black;
+    text-decoration: none;
+   
+  }
+.nav-right a:hover{
+  color:#D29E69;
+  text-decoration: underline;
+}
+
+  header {
+    background-color:white; /* Light gray background for the header */
+    width: 100%; 
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+
+  

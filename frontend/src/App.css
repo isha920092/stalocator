@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.header-container{
+  margin-top: 2px;
+} 
+.app-container{
+  margin-top: 1px;
+}
+.app-container iframe{
+  flex: 1;
+}
+.app-container {
+   /* Replace with your image path */
+  background-size: cover; /* Adjust background size as needed */
+  /* min-height: 100vh; */
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+   align-items: flex-start;
+   padding:0px;
+}
+.aboutus-container {
+  /* Add styles for the About component to make it full width */
+  width: 100%; /* Set width to 100% */
+  padding: 20px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Ensure padding is included in the total width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  background-image: url('./ProjectLogo.png');
+  background-size: cover;
+  width: 250px;
+  height: 200px;
+  margin-left: 40%;
+}
+.pgimg{
+  background-image: url('./stalocatorimg.jpg');
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  background-repeat: no-repeat;
+  margin-left: 120px;
+
+}
+.pgtext{
+  display: inline;
+}
+.temp{
+  height: 100px;
+}
+
+.div1{
+  background-image: url('./loginImage.png');
+  filter: blur(4px); /* Adjust blur amount as needed */
+  width: 1600px;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+    z-index: 1;
+    margin-top: 50px;
+}
+
+
+.divr1{
+  background-image: url('./regImage.png');
+  filter: blur(2px); /* Adjust blur amount as needed */
+  width: 1600px;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+    z-index: 1; 
+    
+}
+.faq{
+  margin-top: 50px;
+  margin-left:250px;
+}

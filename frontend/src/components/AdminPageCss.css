@@ -1,0 +1,61 @@
+.approved-button {
+  background-color: yellow;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+.approve-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.adminpage{
+  margin-left: 150px;
+}
+.delete-button{
+  background-color: rgb(212, 13, 13);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.getall{
+  background-color:#5bf513;
+  color: rgb(15, 12, 12);
+  border: none;
+  width: 180px;
+  padding: 5px 10px;
+  font-size: larger;
+  cursor: pointer;
+  height: 60px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 300px;
+}
+
+.approve-button:hover {
+  background-color: #3e8e41;
+}
+
+table {
+  border-collapse: collapse;
+  height: 400px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  width: 400px;
+}
+
+th {
+  background-color: #f0f0f0;
+}

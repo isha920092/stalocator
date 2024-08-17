@@ -1,0 +1,37 @@
+button{
+    margin-left: 10px;
+}
+
+button a{
+    color:white;
+}
+
+.book-now-button {
+    background-color: #965e2d; /* Adjust the color as needed */
+    color:white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin-left: 85%;
+    margin-bottom: 5px;
+  }
+  
+  .book-now-button:hover {
+    background-color: rgb(29, 7, 90);/* Adjust the hover color as needed */
+
+  }
+  .exclusive-rates {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:large;
+  }

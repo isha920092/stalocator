@@ -1,0 +1,50 @@
+/* Update button */
+.update-btn {
+    background-color: #337ab7; /* blue */
+    color: #ffffff; /* white */
+    border-color: #2e6da4; /* darker blue */
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .update-btn:hover {
+    background-color: #23527c; /* darker blue */
+    border-color: #1d4e7a; /* darker blue */
+  }
+  
+  /* Delete button */
+  .delete-btn {
+    background-color: #d9534f; /* red */
+    color: #ffffff; /* white */
+    border-color: #c12e2a; /* darker red */
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c9302c; /* darker red */
+    border-color: #ac2925; /* darker red */
+  }
+  
+  /* Save button */
+  .save-btn {
+    background-color: #5cb85c; /* green */
+    color: #ffffff; /* white */
+    border-color: #4cae4c; /* darker green */
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-btn:hover {
+    background-color: #449d44; /* darker green */
+    border-color: #398439; /* darker green */
+  }

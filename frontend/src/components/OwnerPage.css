@@ -1,0 +1,90 @@
+/* OwnerPage.css */
+.owner-page {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+form{
+    margin-left: 40px;
+    
+}
+  #addhotel{
+    margin-top: 30px;
+    margin-left: 650px;
+    width: 150px;
+  }
+  label {
+    margin-bottom: 10px;
+  }
+  .ipform table{
+    height: 5px;
+    width: 1550px;
+  }
+  input[type="text"], input[type="number"] {
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .hostel-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1550px;
+  }
+  
+  .hostel-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    width: calc(25% - 40px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hostel-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  
+  .hostel-card h2 {
+    margin-top: 0;
+  }
+  
+  .hostel-card button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .hostel-card button:hover {
+    background-color: #3e8e41;
+  }

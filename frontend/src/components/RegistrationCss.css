@@ -1,0 +1,84 @@
+.registration-form {
+    width: 500px;
+   margin-bottom: 10px;
+    margin-left: 350px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    padding:35px;
+   z-index: 2;
+    height: 830px;
+  }
+  
+  .registration-form h2 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .registration-form label {
+    display: block;
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .registration-form input[type="text"],
+  .registration-form input[type="email"],
+  .registration-form input[type="password"] {
+    width: 90%;
+    height: 40px;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .registration-form input[type="text"]:focus,
+  .registration-form input[type="email"]:focus,
+  .registration-form input[type="password"]:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .registration-form button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .registration-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  .registration-form p{
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .main{
+    width: 200px;
+    margin-left: 0px;
+  }
+  .outer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+
+
+  .radio-group {
+    display: flex; /* Use flexbox to arrange elements in a row */
+    align-items: center; /* Align items vertically */
+  }
+  
+  .radio-group label {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    margin-right: 10px; /* Add some space between labels */
+  }

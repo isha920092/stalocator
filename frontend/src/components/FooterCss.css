@@ -1,0 +1,17 @@
+
+ /* * Add this to make the footer stick to the bottom */ */
+  footer{
+    /* position: absolute; */
+    width: 100%; 
+    height: 90%;
+    
+  }
+  pre{
+   color: rgb(240, 240, 243);
+   background-color: black;
+   text-align: center;
+   /* height: 70%; */
+   padding: 25px;
+   font-size: x-large;
+   font-family: 'Times New Roman', Times, serif;
+  }

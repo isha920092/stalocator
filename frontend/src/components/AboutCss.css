@@ -1,0 +1,27 @@
+/* AboutCss.css */
+
+h1 {
+  text-align: left;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+  color: #555;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: x-large;
+}
+.about1{
+  margin-top: 150px;
+  margin-left: 350px;
+  margin-right: 100px;
+  background-color:aliceblue;
+  padding: 20px;
+  width: 60%;
+}

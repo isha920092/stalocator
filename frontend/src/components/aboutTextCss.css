@@ -1,0 +1,30 @@
+/* AboutCss.css */
+
+h1 {
+    text-align: left;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+  }
+  
+  .aboutStalocator{
+    padding: 20px;
+    float: right;
+    width: 700px;
+    height: 0px;
+    padding-left: 50px;
+    padding-right: 50px; 
+    background-color: white;
+  }
+  
